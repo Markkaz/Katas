@@ -1,0 +1,20 @@
+{
+  "name": "webdevils/katas",
+  "description": "Test Driven Development Kata practice.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mark",
+      "email": "email@example.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Webdevils\\Katas\\": ""
+    }
+  },
+  "require": {
+    "phpunit/phpunit": "^9.5"
+  }
+}
