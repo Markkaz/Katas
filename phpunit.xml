@@ -3,5 +3,8 @@
         <testsuite name="fizzbuzz">
             <directory>./FizzBuzz/tests</directory>
         </testsuite>
+        <testsuite name="greeter">
+            <directory>./Greeter/tests</directory>
+        </testsuite>
     </testsuites>
 </phpunit>
