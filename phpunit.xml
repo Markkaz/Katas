@@ -6,5 +6,8 @@
         <testsuite name="greeter">
             <directory>./Greeter/tests</directory>
         </testsuite>
+        <testsuite name="stringcalculator">
+            <directory>./StringCalculator/tests</directory>
+        </testsuite>
     </testsuites>
 </phpunit>
