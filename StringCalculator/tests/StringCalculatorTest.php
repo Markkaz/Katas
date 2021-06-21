@@ -42,4 +42,33 @@ class StringCalculatorTest extends TestCase
     {
         $this->assertEquals(6, $this->calculator->add("//;\n1;2;3"));
     }
+
+    /** @test */
+    public function can_change_delimiter_to_an_arbitrary_length_custom_delimiter()
+    {
+        $this->assertEquals(6, $this->calculator->add("//;;;\n1;;;2;;;3"));
+        $this->assertEquals(6, $this->calculator->add("//***\n1***2***3"));
+    }
+
+    /** @test */
+    public function can_have_multiple_custom_delimiters()
+    {
+        $this->assertEquals(6, $this->calculator->add("//[*][%]\n1*2%3"));
+    }
+
+    /** @test */
+    public function numbers_larger_than_1000_are_ignored()
+    {
+        $this->assertEquals(1001, $this->calculator->add('1000,1'));
+        $this->assertEquals(8, $this->calculator->add('5,1001,3'));
+    }
+
+    /** @test */
+    public function throws_exception_for_negative_numbers()
+    {
+        $this->expectException(NegativeNumber::class);
+        $this->expectExceptionMessage('Negative numbers not allowed: [-1]');
+
+        $this->calculator->add('-1,2');
+    }
 }
