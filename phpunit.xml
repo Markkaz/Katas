@@ -9,5 +9,8 @@
         <testsuite name="stringcalculator">
             <directory>./StringCalculator/tests</directory>
         </testsuite>
+        <testsuite name="primefactors">
+            <directory>./PrimeFactors/tests</directory>
+        </testsuite>
     </testsuites>
 </phpunit>
